@@ -142,7 +142,7 @@ class TicTacToe
         end
       end
   end
-=end 
+=end
 
   def winner
     WIN_COMBINATIONS.each do |combo|
@@ -171,7 +171,7 @@ class TicTacToe
     while over? == false
       turn
     end
-    if won? == true
+    if won?
       puts "Congratulations #{winner}!"
     ##  winner
     end
