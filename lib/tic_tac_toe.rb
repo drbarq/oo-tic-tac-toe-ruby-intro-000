@@ -130,6 +130,7 @@ class TicTacToe
     return false
   end
 
+=begin
   def winner
       if won?
         if @board.count("X") > @board.count("O")
@@ -141,6 +142,7 @@ class TicTacToe
         end
       end
   end
+=end 
 
   def winner
     WIN_COMBINATIONS.each do |combo|
