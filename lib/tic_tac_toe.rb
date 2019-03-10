@@ -162,7 +162,7 @@ class TicTacToe
 
         end
     end
-    return false
+    return nil
   end
 
 
