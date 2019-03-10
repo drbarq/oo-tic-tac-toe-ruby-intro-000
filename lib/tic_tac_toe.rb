@@ -92,7 +92,7 @@ class TicTacToe
         position_3 = @board[win_index_3]
 
         if position_1 == "X" && position_2 == "X" && position_3 == "X"
-          puts combo
+          puts combo[0], combo[1], combo[2]
           return true
 
        elsif position_1 == "O"  && position_2 == "O" && position_3 == "O"
