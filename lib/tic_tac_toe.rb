@@ -1,3 +1,9 @@
+
+##easier the second time around.  needed to rewrite the winner method to facilitate returning the
+## combo and also congratulate the winner 
+
+
+
 class TicTacToe
   def initialize(board = nil)
     @board = board || Array.new(9," ")
