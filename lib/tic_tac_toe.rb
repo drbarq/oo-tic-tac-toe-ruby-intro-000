@@ -81,7 +81,7 @@ class TicTacToe
     end
   end
 
-  def won?(board)
+  def won?
     WIN_COMBINATIONS.each do |combo|
         win_index_1 = combo[0]
         win_index_2 = combo[1]
@@ -100,8 +100,8 @@ class TicTacToe
     return false
   end
 
-  def full?(board)
-    board.select do |space|
+  def full?
+    @board.select do |space|
       if space == " "
         return false
       end
@@ -109,8 +109,8 @@ class TicTacToe
   return true
   end
 
-  def draw?(board)
-    if won?(board) == false && full?(board) == true
+  def draw?
+    if won? == false && full? == true
         puts "Cat's Game!"
         return true
       else
@@ -119,19 +119,19 @@ class TicTacToe
       return false
   end
 
-  def over?(board)
-    draw?(board)
-    won?(board)
-    full?(board)
+  def over?
+    draw?
+    won?
+    full?
     if draw?(board) || full?(board) || won?(board)
       return true
     end
     return false
   end
 
-  def winner(board)
-      if won?(board)
-        if board.count("X") > board.count("O")
+  def winner
+      if won?
+        if @board.count("X") > @board.count("O")
           puts "Congratulations X!"
           return "X"
         else
@@ -141,16 +141,16 @@ class TicTacToe
       end
   end
 
-  def play(board)
-    while over?(board) == false
-      turn(board)
+  def play
+    while over? == false
+      turn
     end
-    if won?(board) == true
-      winner(board)
+    if won? == true
+      winner
     end
-    if over?(board)
-      if draw?(board)
-        draw?(board)
+    if over?
+      if draw?
+        draw?
       end
     end
   end
