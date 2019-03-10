@@ -31,10 +31,10 @@ class TicTacToe
     @board[index] = value
   end
 
-  def position_taken?(array, index)
-    if array[index] == " " || array[index] == ""
+  def position_taken?(index)
+    if @board[index] == " " || @board[index] == ""
       false
-    elsif array[index] == nil
+    elsif @board[index] == nil
       false
     else
       true
