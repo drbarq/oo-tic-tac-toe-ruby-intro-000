@@ -145,6 +145,8 @@ class TicTacToe
       end
   end
 
+binding.pry 
+
   def play
     while over? == false
       turn
