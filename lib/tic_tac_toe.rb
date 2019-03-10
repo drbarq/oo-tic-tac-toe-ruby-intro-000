@@ -123,7 +123,7 @@ class TicTacToe
     draw?
     won?
     full?
-    if draw?(board) || full?(board) || won?(board)
+    if draw? || full? || won?
       return true
     end
     return false
