@@ -128,20 +128,6 @@ class TicTacToe
     return false
   end
 
-=begin
-  def winner
-      if won?
-        if @board.count("X") > @board.count("O")
-          puts "Congratulations X!"
-          return "X"
-        else
-          puts "Congratulations O!"
-          return "O"
-        end
-      end
-  end
-=end
-
   def winner
     WIN_COMBINATIONS.each do |combo|
         position_1 = @board[combo[0]]
