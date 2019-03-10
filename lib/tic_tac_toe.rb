@@ -49,6 +49,10 @@ class TicTacToe
     end
   end
 
+  def turn_count
+    return @board.count("X") + @board.count("O")
+  end
+
   def turn(board)
     puts "Please enter 1-9:"
     input = gets
@@ -63,10 +67,6 @@ class TicTacToe
       ##  display_board(board)
         turn(board)
       end
-  end
-
-  def turn_count(board)
-    return board.count("X") + board.count("O")
   end
 
   def current_player(board)
