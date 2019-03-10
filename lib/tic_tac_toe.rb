@@ -1,6 +1,6 @@
 
 ##easier the second time around.  needed to rewrite the winner method to facilitate returning the
-## combo and also congratulate the winner 
+## combo and also congratulate the winner
 
 
 
@@ -62,15 +62,12 @@ class TicTacToe
   def turn
     puts "Please enter 1-9:"
     input = gets
-  ##  input_to_index(input)
     index = input_to_index(input)
     value = current_player
       if valid_move?(index)
         move(index, value)
         display_board
       else
-      ##  puts "Invalid move, please select again"
-      ##  display_board(board)
         turn
       end
   end
@@ -94,13 +91,9 @@ class TicTacToe
         position_3 = @board[combo[2]]
 
         if position_1 == "X" && position_2 == "X" && position_3 == "X"
-          ##return combo[0], combo[1], combo[2]
-        ##  return true
         return combo
 
        elsif position_1 == "O"  && position_2 == "O" && position_3 == "O"
-        ##  return combo[0], combo[1], combo[2]
-        ##  return true
         return combo
 
         end
