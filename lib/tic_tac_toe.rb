@@ -95,11 +95,11 @@ class TicTacToe
 
         if position_1 == "X" && position_2 == "X" && position_3 == "X"
           ##return combo[0], combo[1], combo[2]
-          return combo
+          return true
 
        elsif position_1 == "O"  && position_2 == "O" && position_3 == "O"
         ##  return combo[0], combo[1], combo[2]
-          return combo
+          return true
 
         end
     end
