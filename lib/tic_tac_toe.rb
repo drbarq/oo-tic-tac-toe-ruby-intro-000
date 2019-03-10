@@ -53,19 +53,19 @@ class TicTacToe
     return @board.count("X") + @board.count("O")
   end
 
-  def turn(board)
+  def turn
     puts "Please enter 1-9:"
     input = gets
     input_to_index(input)
     index = input_to_index(input)
-    value = current_player(board)
-      if valid_move?(board, index)
-        move(board, index, value)
-        display_board(board)
+    value = current_player
+      if valid_move?(index)
+        move(index, value)
+        display_board
       else
       ##  puts "Invalid move, please select again"
       ##  display_board(board)
-        turn(board)
+        turn
       end
   end
 
