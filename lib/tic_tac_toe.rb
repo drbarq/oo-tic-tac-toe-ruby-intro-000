@@ -83,15 +83,15 @@ class TicTacToe
 
   def won?
     WIN_COMBINATIONS.each do |combo|
-        win_index_1 = combo[0]
-        win_index_2 = combo[1]
-        win_index_3 = combo[2]
+    ##    win_index_1 = combo[0]
+    ##    win_index_2 = combo[1]
+    ##    win_index_3 = combo[2]
 
-        position_1 = @board[win_index_1]
-        position_2 = @board[win_index_2]
-        position_3 = @board[win_index_3]
+        position_1 = @board[combo[0]]
+        position_2 = @board[combo[1]]
+        position_3 = @board[combo[2]]
 
-        
+
 
         if position_1 == "X" && position_2 == "X" && position_3 == "X"
           ##return combo[0], combo[1], combo[2]
